@@ -1,0 +1,36 @@
+$primary: #5e3ad8;
+$secondary: #00ba93;
+$black: #000000;
+$bg-color: #eeeeee;
+
+:root {
+	--header-height: 100px;
+	--layout-margin: 1rem;
+	--layout-max-width: 1200px;
+}
+
+@include atXLarge {
+	:root {
+		--header-height: 90px;
+	}
+}
+
+@include atLarge {
+	:root {
+		--header-height: 72px;
+		--layout-margin: 3rem;
+	}
+}
+
+@include atMedium {
+	:root {
+		--header-height: 63px;
+		--layout-margin: 2rem;
+	}
+}
+
+@include atSmall {
+	:root {
+		--layout-margin: 1rem;
+	}
+}

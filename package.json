@@ -1,0 +1,16 @@
+{
+	"name": "zonda-challenge",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Hada Jang",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"build": "wp-scripts build",
+		"start": "wp-scripts start",
+		"start:hot": "wp-scripts start --hot"
+	},
+	"dependencies": {
+		"@wordpress/scripts": "^26.9.0"
+	}
+}
