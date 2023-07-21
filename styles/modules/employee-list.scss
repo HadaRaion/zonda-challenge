@@ -1,0 +1,15 @@
+.employee-list {
+	margin-top: 5rem;
+	display: grid;
+	column-gap: 2rem;
+	row-gap: 4rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+
+	@include atMedium {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	@include atSmall {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}

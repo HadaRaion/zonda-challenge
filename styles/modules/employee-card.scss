@@ -1,0 +1,11 @@
+.employee-card {
+	display: flex;
+	flex-direction: column;
+
+	&__image {
+	}
+
+	&__text {
+		margin-top: 1rem;
+	}
+}
