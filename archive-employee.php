@@ -52,8 +52,8 @@ get_header();
 			</ul>
 
 			<?php the_posts_navigation( array(
-  			'prev_text' => 'Newer employees',
-				'next_text' => 'Older employees'
+  			'prev_text' => 'Older employees',
+				'next_text' => 'Newer employees'
 			) );
 
 		else : ?>
