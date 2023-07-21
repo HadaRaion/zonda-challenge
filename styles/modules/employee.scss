@@ -1,0 +1,41 @@
+.employee {
+	display: flex;
+	gap: 4rem;
+
+	& > section {
+		width: 50%;
+	}
+
+	@include atMedium {
+		flex-direction: column;
+
+		& > section {
+			width: 100%;
+		}
+	}
+
+	&__image {
+		position: relative;
+		aspect-ratio: 1 / 1;
+		height: 100%;
+
+		@include atMedium {
+			order: -1;
+		}
+
+		&__profile {
+			position: absolute;
+			width: 100%;
+		}
+		&__division-logo {
+			position: absolute;
+			bottom: 0.8rem;
+			right: 0.8rem;
+			opacity: 0.7;
+		}
+	}
+
+	&__info > h2 {
+		line-height: 1.2;
+	}
+}

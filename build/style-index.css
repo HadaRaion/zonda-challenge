@@ -287,7 +287,15 @@ input:focus-visible {
 }
 
 .text-secondary {
-  color: #00ba93;
+  color: #008568;
+}
+
+.text-red {
+  color: #cc3c0e;
+}
+
+.text-gray {
+  color: #595959;
 }
 
 .text-left {
@@ -465,27 +473,64 @@ main {
   align-items: center;
 }
 
-.skip {
-  width: 1px;
-  height: 0px;
-  overflow: hidden;
+.employee {
+  display: flex;
+  gap: 4rem;
 }
-.skip-link {
-  width: 100%;
-  padding: 20px 0;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  background-color: #272727;
-  text-align: center;
+.employee > section {
+  width: 50%;
+}
+@media (max-width: 960px) {
+  .employee {
+    flex-direction: column;
+  }
+  .employee > section {
+    width: 100%;
+  }
+}
+.employee__image {
+  position: relative;
+  aspect-ratio: 1/1;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  .employee__image {
+    order: -1;
+  }
+}
+.employee__image__profile {
   position: absolute;
-  top: -10000px;
-  left: 0;
-  z-index: 10000;
-  display: block;
+  width: 100%;
 }
-.skip-link:focus {
-  top: 0;
+.employee__image__division-logo {
+  position: absolute;
+  bottom: 0.8rem;
+  right: 0.8rem;
+  opacity: 0.7;
+}
+.employee__info > h2 {
+  line-height: 1.2;
+}
+
+.custom-post-navigation {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 6rem;
+}
+.custom-post-navigation a {
+  border: 1px solid #5e3ad8;
+  color: #5e3ad8;
+}
+.custom-post-navigation span {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 4rem;
+}
+.custom-post-navigation .disabled-link {
+  background-color: #595959;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style-index.css.map*/

@@ -13,7 +13,7 @@ get_header();
 	<main id="contents" class="site-main">
 		<h2>Archive</h2>
 	</main><!-- #main -->
-
+	
 <?php
 
 get_footer();

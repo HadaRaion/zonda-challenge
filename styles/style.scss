@@ -1,5 +1,5 @@
 /* SASS and Global'ish Stuff */
-@import 'base/font.scss';
+@import 'base/font';
 @import 'base/mixin';
 @import 'base/variables';
 @import 'base/global';
@@ -8,7 +8,8 @@
 /* Common Blocks */
 
 /* BEM Blocks */
-@import 'modules/site-header.scss';
-@import 'modules/site-main.scss';
-@import 'modules/site-footer.scss';
-@import 'modules/skip.scss';
+@import 'modules/site-header';
+@import 'modules/site-main';
+@import 'modules/site-footer';
+@import 'modules/employee';
+@import 'modules/custom-post-navigation';

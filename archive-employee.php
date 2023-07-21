@@ -39,7 +39,7 @@ get_header();
 							</span>
 						<h2><?php echo $employee_name; ?></h2>
             <p><?php echo $position_title; ?></p>
-							<span class="post__title text-2xl font-500"><?php the_title(); ?></span>
+
 						</a>
 					</li>
 					

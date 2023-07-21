@@ -45,3 +45,57 @@ function zonda_post_types() {
 }
  
 add_action('init', 'zonda_post_types');
+
+function getYearsMonthsWorked($startDate) {
+  $today = new DateTime();
+  $startDateObj = DateTime::createFromFormat('Ymd', $startDate);
+
+  $interval = $today->diff($startDateObj);
+
+  $years = $interval->y;
+  $months = $interval->m;
+
+  $result = '';
+
+  if ($years > 0) {
+    $result .= ($years === 1) ? '1 year ' : $years . ' years ';
+  }
+
+  if ($months > 0) {
+    $result .= ($months === 1) ? '1 month' : $months . ' months';
+  }
+
+  return trim($result);
+}
+
+function custom_post_navigation($args) {
+  if (!isset($args)) {
+    $args = 'post';
+  }
+
+  $next_post = get_next_post();
+  $prev_post = get_previous_post();
+
+  if ($next_post) {
+    $next_post_link = get_next_post_link('%link', '<span class="text-xl text-center next-post-link-text">Next ' . $args . '</span>');
+  } else {
+    $next_post_link = '<span class="text-xl text-center next-post-link-text disabled-link">No next ' . $args . '</span>';
+  }
+
+  if ($prev_post) {
+    $prev_post_link = get_previous_post_link('%link', '<span class="text-xl text-center prev-post-link-text">Prev ' . $args . '</span>');
+  } else {
+    $prev_post_link = '<span class="text-xl text-center prev-post-link-text disabled-link">No prev ' . $args . '</span>';
+  }
+
+  $post_type_archive_link = get_post_type_archive_link($args);
+  $archive_link_text = 'See all ' . $args . 's';
+
+  echo '<nav class="custom-post-navigation">';
+  echo $next_post_link;
+  if ($post_type_archive_link) {
+    echo '<a class="post-list-link" href="' . $post_type_archive_link . '"><span class="text-xl text-center post-list-link-text">' . $archive_link_text . '</span></a>';
+  }
+  echo $prev_post_link;
+  echo '</nav>';
+}
