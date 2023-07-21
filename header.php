@@ -23,13 +23,13 @@
 <?php wp_body_open(); ?>
 	<a class="skip-link screen-reader-text" href="#contents"><?php esc_html_e( 'Skip to content', 'zonda-challenge' ); ?></a>
 
-	<header class="site-header">
+	<header class="site-header" aria-label="Site header">
 		<div class="container">
 			<?php
 
 			if ( is_front_page() OR is_home() ) :
 				?>
-				<h1 class="site-title">
+				<h1 class="site-title" aria-label="Site title logo">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img class="site-header__logo" src="<?php echo get_theme_file_uri('/images/zonda-logo.svg'); ?>" alt="Zonda Logo">
 						<span class="sr-only"><?php bloginfo( 'name' ); ?><span>
@@ -37,7 +37,7 @@
 				<?php
 			else :
 				?>
-				<p class="site-title">		
+				<p class="site-title" aria-label="Site title logo">		
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img class="site-header__logo" src="<?php echo get_theme_file_uri('/images/zonda-logo.svg'); ?>" alt="Zonda Logo">
 						<span class="sr-only"><?php bloginfo( 'name' ); ?><span>
@@ -46,7 +46,7 @@
 				<?php
 			endif; ?>
 
-			<nav class="site-nav">
+			<nav class="site-nav" aria-label="Site main">
 				<ul>
 					<li <?php if (get_post_type() == 'employee') echo 'class="underline"' ?>><a class="text-lg font-medium" href="<?php echo get_post_type_archive_link('employee'); ?>">Employee</a></li>
 				</ul>

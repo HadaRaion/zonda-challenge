@@ -23,7 +23,7 @@ get_header();
 
 			<div class="employee">
 
-				<section class="employee__info">
+				<section class="employee__info" aria-label="Employee's information">
 					<h1 class="font-serif text-7xl font-normal"><?php echo $employee_name; ?></h1>
 	
 					<h2 class="text-xl font-normal p-top-xs <?php
@@ -47,7 +47,7 @@ get_header();
 					</div>
 				</section>		
 
-				<section class="employee__image">
+				<section class="employee__image" aria-label="Employee's image">
 					<div class="employee__image__profile">
 						<?php if ($profile_image) : ?>
 						<img
@@ -60,9 +60,9 @@ get_header();
 									
 					<div class="employee__image__division-logo">
 						<?php if ($division_logo) : ?>
-							<img src="<?php echo $division_logo['url']; ?>" alt="<?php echo $division_title; ?>">
+							<img src="<?php echo $division_logo['url']; ?>" alt="<?php echo $division_logo['alt'] ? $division_logo['alt'] : $division_title . 'logo'; ?>">
 						<?php else : ?>
-							<img src="<?php echo get_theme_file_uri('/images/division-logo-home.svg'); ?>" alt="<?php echo $division_title; ?>">
+							<img src="<?php echo get_theme_file_uri('/images/division-logo-home.svg'); ?>" alt="Zonda logo">
 						<?php endif; ?>
 					</div>
 				</section>		

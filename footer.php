@@ -11,7 +11,7 @@
 
 ?>
 
-	<footer class="site-footer">
+	<footer class="site-footer" aria-label="Site footer">
 		<div class="container">
 			<p>© 2023 Zonda | All rights reserved</p>
 		</div>

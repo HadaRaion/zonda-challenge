@@ -14,8 +14,8 @@ get_header();
 		<div class="container">
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<h1 class="font-serif font-normal text-center text-7xl">Meet our employees</h1>
+			<header class="page-header" aria-labelledby="archive-title">
+				<h1 class="font-serif font-normal text-center text-7xl" id="archive-title">Meet our employees</h1>
 			</header>
 
 			<ul class="employee-list">

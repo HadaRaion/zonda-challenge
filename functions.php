@@ -90,7 +90,7 @@ function custom_post_navigation($args) {
   $post_type_archive_link = get_post_type_archive_link($args);
   $archive_link_text = 'See all ' . $args . 's';
 
-  echo '<nav class="custom-post-navigation">';
+  echo '<nav class="custom-post-navigation" aria-label="Posts">';
   echo $prev_post_link;
   if ($post_type_archive_link) {
     echo '<a class="post-list-link" href="' . $post_type_archive_link . '"><span class="text-xl text-center post-list-link-text">' . $archive_link_text . '</span></a>';
