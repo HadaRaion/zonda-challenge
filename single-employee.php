@@ -5,7 +5,7 @@ $profile_image = get_field('profile_image');
 $position_title = get_field('position_title');
 $division_title = get_field('division_title');
 $division_logo = get_field('division_logo');
-$first_day_of_zonda = get_field('first_day_of_zonda');
+$first_day_at_zonda = get_field('first_day_at_zonda');
 $bios = get_field('bios');
 
 
@@ -40,7 +40,7 @@ get_header();
 						<?php echo $position_title; ?> at <?php echo $division_title; ?>
 					</h2>
 
-					<p class="text-xl text-gray">has been working for <?php echo getYearsMonthsWorked($first_day_of_zonda) ?></p>
+					<p class="text-xl text-gray">has been working for <?php echo getYearsMonthsWorked($first_day_at_zonda) ?></p>
 
 					<div class="employee__info__bio p-top-small text-lg">
 						<?php echo $bios; ?>

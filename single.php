@@ -14,16 +14,11 @@ get_header();
 
 		<?php
 		while ( have_posts() ) :
-			the_post();
+			the_post(); ?>
 
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'zonda-challenge' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'zonda-challenge' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
+			<h1><?php the_title(); ?></h1>
 
-		endwhile; 
+		<?php endwhile; 
 		?>
 
 	</main>
