@@ -16,7 +16,7 @@ get_header();
 
 			<header class="page-header">
 				<h1 class="font-serif font-normal text-center text-7xl">Meet our employees</h1>
-			</header><!-- .page-header -->
+			</header>
 
 			<ul class="employee-list">
 				<?php
@@ -49,9 +49,12 @@ get_header();
 
 				<?php endwhile; 
 				?>
-			<ul>
+			</ul>
 
-			<?php the_posts_navigation();
+			<?php the_posts_navigation( array(
+  			'prev_text' => 'Newer employees',
+				'next_text' => 'Older employees'
+			) );
 
 		else : ?>
 
@@ -61,6 +64,8 @@ get_header();
 		?>
 		</div>
 	</main><!-- #main -->
+
+	
 
 <?php
 get_footer();

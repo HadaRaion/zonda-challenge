@@ -1,0 +1,30 @@
+.posts-navigation {
+	margin-top: 6rem;
+
+	.nav-links {
+		display: flex;
+		justify-content: center;
+		gap: 3rem;
+
+		@include atMedium {
+			gap: 2rem;
+		}
+
+		& > div {
+			width: 25%;
+
+			@include atMedium {
+				width: 50%;
+			}
+		}
+
+		a {
+			width: 100%;
+			display: grid;
+			height: 4rem;
+			place-items: center;
+			border: 1px solid $primary;
+			color: $primary;
+		}
+	}
+}
