@@ -21,7 +21,6 @@ add_action('wp_enqueue_scripts', 'zonda_files');
 
 function zonda_features() {
   add_theme_support('title-tag');
-  // add_theme_support('post-thumbnails');
   add_image_size('employeeProfile', 400, 400, true);
   add_image_size('employeeProfile-2x', 800, 800, true);
 }
@@ -73,14 +72,8 @@ function custom_post_navigation($args) {
     $args = 'post';
   }
 
-  $next_post = get_next_post();
   $prev_post = get_previous_post();
-
-  if ($next_post) {
-    $next_post_link = get_next_post_link('%link', '<span class="text-xl text-center next-post-link-text">Next ' . $args . '</span>');
-  } else {
-    $next_post_link = '<span class="text-xl text-center next-post-link-text disabled-link">No next ' . $args . '</span>';
-  }
+  $next_post = get_next_post();
 
   if ($prev_post) {
     $prev_post_link = get_previous_post_link('%link', '<span class="text-xl text-center prev-post-link-text">Prev ' . $args . '</span>');
@@ -88,14 +81,20 @@ function custom_post_navigation($args) {
     $prev_post_link = '<span class="text-xl text-center prev-post-link-text disabled-link">No prev ' . $args . '</span>';
   }
 
+  if ($next_post) {
+    $next_post_link = get_next_post_link('%link', '<span class="text-xl text-center next-post-link-text">Next ' . $args . '</span>');
+  } else {
+    $next_post_link = '<span class="text-xl text-center next-post-link-text disabled-link">No next ' . $args . '</span>';
+  }
+
   $post_type_archive_link = get_post_type_archive_link($args);
   $archive_link_text = 'See all ' . $args . 's';
 
   echo '<nav class="custom-post-navigation">';
-  echo $next_post_link;
+  echo $prev_post_link;
   if ($post_type_archive_link) {
     echo '<a class="post-list-link" href="' . $post_type_archive_link . '"><span class="text-xl text-center post-list-link-text">' . $archive_link_text . '</span></a>';
   }
-  echo $prev_post_link;
+  echo $next_post_link;
   echo '</nav>';
 }
