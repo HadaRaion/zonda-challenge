@@ -9,22 +9,22 @@
 html {
 	overflow-y: scroll;
 	scroll-behavior: smooth;
-	scrollbar-width: none;
-}
-
-html::-webkit-scrollbar {
-	display: none;
 }
 
 html,
 body {
 	width: 100%;
 	overflow-x: hidden;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
 	min-height: calc(var(--vh, 1vh) * 100);
-	background-color: var(--color-bg);
 	font-family: 'GT Walsheim', 'Helvetica Neue', sans-serif;
 	line-height: 1.6;
-	line-break: anywhere;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
 }
 
 img {

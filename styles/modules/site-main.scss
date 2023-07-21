@@ -1,4 +1,7 @@
 main {
+	padding: 6rem 0;
+	flex: 1;
+
 	@include atLarge {
 		width: 100%;
 	}

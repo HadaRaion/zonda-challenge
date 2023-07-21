@@ -10,7 +10,7 @@
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main id="contents" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -23,10 +23,10 @@ get_header();
 				)
 			);
 
-		endwhile; // End of the loop.
+		endwhile; 
 		?>
 
-	</main><!-- #main -->
+	</main>
 
 <?php
 

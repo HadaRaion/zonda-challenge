@@ -11,18 +11,11 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'zonda-challenge' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'zonda-challenge' ), 'WordPress' );
-				?>
-			</a>
-			
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<footer class="site-footer">
+		<div class="container">
+			<p>© 2023 Zonda | All rights reserved</p>
+		</div>
+	</footer>
 
 <?php wp_footer(); ?>
 

@@ -15,35 +15,41 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'zonda-challenge' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#contents"><?php esc_html_e( 'Skip to content', 'zonda-challenge' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
+	<header class="site-header">
+		<div class="container">
 			<?php
-			// the_custom_logo();
-			if ( is_front_page() && is_home() ) :
+
+			if ( is_front_page() OR is_home() ) :
 				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img class="site-header__logo" src="<?php echo get_theme_file_uri('/images/zonda-logo.svg'); ?>" alt="Zonda Logo">
+						<span class="sr-only"><?php bloginfo( 'name' ); ?><span>
+				</a></h1>
 				<?php
 			else :
 				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<p class="site-title">		
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<img class="site-header__logo" src="<?php echo get_theme_file_uri('/images/zonda-logo.svg'); ?>" alt="Zonda Logo">
+						<span class="sr-only"><?php bloginfo( 'name' ); ?><span>
+					</a>
+				</p>
 				<?php
-			endif;
-			$zonda_challenge_description = get_bloginfo( 'description', 'display' );
-			if ( $zonda_challenge_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $zonda_challenge_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+			endif; ?>
 
-
-	</header><!-- #masthead -->
+			<nav class="site-nav">
+				<ul>
+					<li <?php if (get_post_type() == 'employee') echo 'class="underline"' ?>><a class="text-lg font-medium" href="<?php echo get_post_type_archive_link('employee'); ?>">Employee</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>

@@ -1,3 +1,11 @@
 .site-footer {
-	position: relative;
+	height: var(--header-height);
+	border-top: 1px solid $black;
+
+	.container {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }

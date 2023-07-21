@@ -21,7 +21,7 @@ add_action('wp_enqueue_scripts', 'zonda_files');
 
 function zonda_features() {
   add_theme_support('title-tag');
-  add_theme_support('post-thumbnails');
+  // add_theme_support('post-thumbnails');
   add_image_size('employeeProfile', 400, 400, true);
   add_image_size('employeeProfile-2x', 800, 800, true);
 }
@@ -32,6 +32,7 @@ function zonda_post_types() {
   register_post_type('employee', array(
     'public' => true,
     'show_in_rest' => true,
+    'has_archive' => true,
     'labels' => array(
       'name' => 'Employees',
       'add_new_item' => 'Add New Employee',

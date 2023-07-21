@@ -7,8 +7,7 @@
 	"private": false,
 	"scripts": {
 		"build": "wp-scripts build",
-		"start": "wp-scripts start",
-		"start:hot": "wp-scripts start --hot"
+		"start": "wp-scripts start"
 	},
 	"dependencies": {
 		"@wordpress/scripts": "^26.9.0"

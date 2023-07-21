@@ -4,27 +4,20 @@ $black: #000000;
 $bg-color: #eeeeee;
 
 :root {
-	--header-height: 100px;
+	--header-height: 5rem;
 	--layout-margin: 1rem;
 	--layout-max-width: 1200px;
 }
 
-@include atXLarge {
-	:root {
-		--header-height: 90px;
-	}
-}
-
 @include atLarge {
 	:root {
-		--header-height: 72px;
 		--layout-margin: 3rem;
 	}
 }
 
 @include atMedium {
 	:root {
-		--header-height: 63px;
+		--header-height: 4rem;
 		--layout-margin: 2rem;
 	}
 }

@@ -7,16 +7,16 @@
 	margin-right: auto;
 }
 
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(100%);
+.sr-only {
+	position: absolute;
 	width: 1px;
 	height: 1px;
-	border: 0;
+	padding: 0;
+	margin: -1px;
 	overflow: hidden;
-	display: block;
-	position: absolute;
+	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
+	border-width: 0;
 }
 
 .fix-position {
@@ -113,46 +113,50 @@
 }
 
 .font-serif {
-	font-family: 'Nib Pro Regular', serif;
+	font-family: 'Nib Pro', serif;
 }
 
-.font-400 {
+.font-light {
+	font-weight: 300;
+}
+
+.font-normal {
 	font-weight: 400;
 }
 
-.font-500 {
+.font-medium {
 	font-weight: 500;
 }
 
 .font-bold {
-	font-weight: bold;
+	font-weight: 700;
 }
 
-.font-white {
+.text-white {
 	color: #fff;
 }
 
-.color-part2 {
-	color: var(--color-part2);
+.text-primary {
+	color: $primary;
 }
 
-.color-part3 {
-	color: var(--color-part3);
+.text-secondary {
+	color: $secondary;
 }
 
-.t-left {
+.text-left {
 	text-align: left;
 }
 
-.t-right {
+.text-right {
 	text-align: right;
 }
 
-.t-center {
+.text-center {
 	text-align: center;
 }
 
-.t-underline {
+.underline {
 	text-decoration: solid underline currentColor 1px;
 	text-underline-offset: 2px;
 }
