@@ -17,7 +17,7 @@ get_header();
 
 	<main id="contents" class="site-main">
 		<div class="container">
-			<h1 class="text-3xl text-center"><?php the_title(); ?> Page</h1>
+			<h2 class="text-3xl text-center"><?php the_title(); ?> Page</h2>
 		</div>
 	</main><!-- #main -->
 
